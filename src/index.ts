@@ -1,5 +1,10 @@
-function add(num1: number, num2: number) {
-  return num1 + num2;
-}
+import { concatenation } from "./concatenation";
 
-add(1, 1);
+const button = document.querySelector("button")!;
+const input = document.querySelector("input")!;
+
+if (button && input) {
+  button.addEventListener("click", () => {
+    concatenation(input.value, "hello!");
+  });
+}
